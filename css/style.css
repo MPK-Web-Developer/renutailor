@@ -108,3 +108,11 @@
 body {
 	background: var(--gradient-color-primary) no-repeat center;
 }
+
+.font {
+	font-family: Overlock;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
