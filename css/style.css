@@ -1,3 +1,104 @@
+/* ========== Start Variable ========== */
+:root {
+	/* Colors */
+
+	/* Primary Colors */
+	--color-1: #f20c78;
+	--color-2: #1e1540;
+	--color-3: #9bdaf2;
+	--color-4: #f28b0c;
+	--color-5: #f2561d;
+
+	/* ========== Start Color-1 Shade Colors ========== */
+	--color-1-50: #fef1f8;
+	--color-1-100: #ffe4f4;
+	--color-1-200: #ffc9ea;
+	--color-1-300: #ff9dd7;
+	--color-1-400: #ff61bb;
+	--color-1-500: #ff329e;
+	--color-1-600: #f20c78;
+	--color-1-700: #d4025e;
+	--color-1-800: #af054e;
+	--color-1-900: #910a43;
+	--color-1-950: #5a0024;
+	/* ========== End Color-1 Shade Colors ============ */
+
+	/* ========== Start Color-2 Shade Colors ========== */
+	--color-2-50: #edefff;
+	--color-2-100: #dfe1ff;
+	--color-2-200: #c5c8ff;
+	--color-2-300: #a2a4ff;
+	--color-2-400: #857dfc;
+	--color-2-500: #715ef6;
+	--color-2-600: #6340eb;
+	--color-2-700: #5533cf;
+	--color-2-800: #452ca7;
+	--color-2-900: #3b2b84;
+	--color-2-950: #1e1540;
+	/* ========== End Color-2 Shade Colors ============ */
+
+	/* ========== Start Color-3 Shade Colors ========== */
+	--color-3-50: #f1fafe;
+	--color-3-100: #e3f2fb;
+	--color-3-200: #c0e7f7;
+	--color-3-300: #9bdaf2;
+	--color-3-400: #4bbde5;
+	--color-3-500: #23a5d4;
+	--color-3-600: #1585b4;
+	--color-3-700: #126b92;
+	--color-3-800: #135a79;
+	--color-3-900: #154b65;
+	--color-3-950: #0e3043;
+	/* ========== End Color-3 Shade Colors ============ */
+
+	/* ========== Start Color-4 Shade Colors ========== */
+	--color-4-50: #fffbed;
+	--color-4-100: #fff6d5;
+	--color-4-200: #fee9aa;
+	--color-4-300: #fdd774;
+	--color-4-400: #fbba3c;
+	--color-4-500: #f9a316;
+	--color-4-600: #f28b0c;
+	--color-4-700: #c2670c;
+	--color-4-800: #9a5112;
+	--color-4-900: #7c4312;
+	--color-4-950: #432107;
+	/* ========== End Color-4 Shade Colors ============ */
+
+	/* ========== Start Color-5 Shade Colors ========== */
+	--color-5-50: #fef5ee;
+	--color-5-100: #fee7d6;
+	--color-5-200: #fbccad;
+	--color-5-300: #f9a878;
+	--color-5-400: #f57a42;
+	--color-5-500: #f2561d;
+	--color-5-600: #e33c13;
+	--color-5-700: #bc2b12;
+	--color-5-800: #962416;
+	--color-5-900: #792115;
+	--color-5-950: #410d09;
+	/* ========== End Color-5 Shade Colors ============ */
+
+	/* ========== Start Gradient Colors ========== */
+	--gradient-color-primary: linear-gradient(
+		to right bottom,
+		#c0e7f7,
+		#bbe3fa,
+		#b8defd,
+		#b8d8fe,
+		#bbd2ff,
+		#c3cfff,
+		#cdcbff,
+		#d7c7fc,
+		#e3c7f8,
+		#eec7f4,
+		#f7c8ef,
+		#ffc9ea
+	);
+	/* ========== End Gradient Colors ============ */
+}
+/* ========== End Variable ============ */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,5 +106,5 @@
 }
 
 body {
-	background: #eaeccc;
+	background: var(--gradient-color-primary) no-repeat center;
 }
