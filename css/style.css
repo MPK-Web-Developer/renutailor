@@ -102,17 +102,72 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: "Overlock", sans-serif;
 	box-sizing: border-box;
 }
 
 body {
-	background: var(--gradient-color-primary) no-repeat center;
+	background: var(--color-5-50);
 }
 
-.font {
-	font-family: Overlock;
-	font-size: 64px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+body a {
+	text-decoration: none;
 }
+
+/* ========== Start Header ========== */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	padding: 12px 2%;
+	display: flex;
+	z-index: 10;
+}
+
+header.sticky {
+	padding: 8px 2%;
+	background: var(--color-1-50);
+	box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+header.sticky .header-logo img {
+	width: 60px;
+	height: 60px;
+}
+
+header .header-logo img {
+	aspect-ratio: 1/1;
+	transition: 0.6s;
+}
+
+header nav.header-navigation ul {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+header nav.header-navigation ul li {
+	position: relative;
+	list-style: none;
+}
+
+header nav.header-navigation ul li a {
+	position: relative;
+	color: var(--color-1-950);
+	font-weight: 600;
+	transition: 0.6s;
+}
+/* ========== End Header ============ */
+
+/* ========== Start Hero Section ========== */
+main .hero-section {
+	min-height: 90vh;
+	background: var(--gradient-color-primary) no-repeat center;
+}
+/* ========== End Hero Section ============ */
