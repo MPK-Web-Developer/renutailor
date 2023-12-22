@@ -16,7 +16,7 @@
 	--color-1-300: #ff9dd7;
 	--color-1-400: #ff61bb;
 	--color-1-500: #ff329e;
-	--color-1-600: #f20c78;
+	--color-1-600-P: #f20c78;
 	--color-1-700: #d4025e;
 	--color-1-800: #af054e;
 	--color-1-900: #910a43;
@@ -34,14 +34,14 @@
 	--color-2-700: #5533cf;
 	--color-2-800: #452ca7;
 	--color-2-900: #3b2b84;
-	--color-2-950: #1e1540;
+	--color-2-950-P: #1e1540;
 	/* ========== End Color-2 Shade Colors ============ */
 
 	/* ========== Start Color-3 Shade Colors ========== */
 	--color-3-50: #f1fafe;
 	--color-3-100: #e3f2fb;
 	--color-3-200: #c0e7f7;
-	--color-3-300: #9bdaf2;
+	--color-3-300-P: #9bdaf2;
 	--color-3-400: #4bbde5;
 	--color-3-500: #23a5d4;
 	--color-3-600: #1585b4;
@@ -165,9 +165,73 @@ header nav.header-navigation ul li a {
 }
 /* ========== End Header ============ */
 
+/* ========== Start Button Style ========== */
+a.button-glass-color-effect {
+	position: relative;
+	font-weight: 600;
+	padding: 16px 24px;
+	border-radius: 6px;
+	color: var(--color-1-950);
+	background: rgba(255, 255, 255, 0.3);
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+a.button-glass-color-effect:hover {
+	color: var(--color-action);
+	text-shadow: 0 0 15px var(--color-action), 0 0 65px var(--color-action);
+}
+
+a.button-glass-color-effect span {
+	position: relative;
+	z-index: 2;
+	letter-spacing: 0.1em;
+}
+
+a.button-glass-color-effect.call-button span.button-icon {
+	padding-right: 8px;
+	font-size: 20px;
+}
+
+a.button-glass-color-effect::before {
+	content: "";
+	position: absolute;
+	top: var(--y);
+	left: var(--x);
+	transform: translate(-50%, -50%);
+	background: radial-gradient(var(--color-action), transparent, transparent);
+	width: 160px;
+	height: 160px;
+	opacity: 0;
+	transition: 0.5s, top 0s, left 0s;
+}
+
+a.button-glass-color-effect:hover::before {
+	opacity: 1;
+}
+
+a.button-glass-color-effect::after {
+	content: "";
+	position: absolute;
+	inset: 1.5px;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 6px;
+}
+
+/* ========== End Button Style ============ */
+
 /* ========== Start Hero Section ========== */
 main .hero-section {
 	min-height: 90vh;
 	background: var(--gradient-color-primary) no-repeat center;
 }
 /* ========== End Hero Section ============ */
+
+/* ========== Start Screen Responsive ========== */
+@media screen and (max-width: 480px) {
+	header {
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+/* ========== End Screen Responsive ============ */
