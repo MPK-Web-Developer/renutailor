@@ -169,7 +169,7 @@ header nav.header-navigation ul li a {
 a.button-glass-color-effect {
 	position: relative;
 	font-weight: 600;
-	padding: 16px 24px;
+	padding: 12px 20px;
 	border-radius: 6px;
 	color: var(--color-1-950);
 	background: rgba(255, 255, 255, 0.3);
@@ -186,11 +186,12 @@ a.button-glass-color-effect span {
 	position: relative;
 	z-index: 2;
 	letter-spacing: 0.1em;
+	font-size: 18px;
 }
 
 a.button-glass-color-effect.call-button span.button-icon {
 	padding-right: 8px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 a.button-glass-color-effect::before {
@@ -232,6 +233,23 @@ main .hero-section {
 	header {
 		flex-direction: column;
 		gap: 40px;
+	}
+
+	header a.button-glass-color-effect.call-button {
+		padding: 12px;
+		border-radius: 50%;
+	}
+
+	header a.button-glass-color-effect::after {
+		border-radius: 50%;
+	}
+
+	header a.button-glass-color-effect.call-button span.button-text {
+		display: none;
+	}
+
+	header a.button-glass-color-effect.call-button span.button-icon {
+		padding-right: 0;
 	}
 }
 /* ========== End Screen Responsive ============ */
