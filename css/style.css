@@ -144,7 +144,8 @@ header .header-logo img {
 	transition: 0.6s;
 }
 
-header nav.header-navigation ul {
+/* ========== Start Header Navigation ========== */
+header nav ul.header-navigation {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -152,21 +153,26 @@ header nav.header-navigation ul {
 	gap: 20px;
 }
 
-header nav.header-navigation ul li {
+header nav ul.header-navigation li {
 	position: relative;
 	list-style: none;
 }
 
-header nav.header-navigation ul li a {
+header nav ul.header-navigation li a {
 	position: relative;
 	color: var(--color-1-950);
 	font-weight: 600;
 	transition: 0.6s;
 }
+header nav ul.header-navigation li a > span[aria-hidden="true"] {
+	display: none;
+}
+
+/* ========== End Header Navigation ============ */
 /* ========== End Header ============ */
 
 /* ========== Start Button Style ========== */
-a.button-glass-color-effect {
+.button-glass-color-effect {
 	position: relative;
 	font-weight: 600;
 	padding: 12px 20px;
@@ -177,24 +183,24 @@ a.button-glass-color-effect {
 	transition: 0.5s;
 }
 
-a.button-glass-color-effect:hover {
+.button-glass-color-effect:hover {
 	color: var(--color-action);
 	text-shadow: 0 0 15px var(--color-action), 0 0 65px var(--color-action);
 }
 
-a.button-glass-color-effect span {
+.button-glass-color-effect span {
 	position: relative;
 	z-index: 2;
 	letter-spacing: 0.1em;
 	font-size: 18px;
 }
 
-a.button-glass-color-effect.call-button span.button-icon {
+.button-glass-color-effect.call-button span.button-icon {
 	padding-right: 8px;
 	font-size: 18px;
 }
 
-a.button-glass-color-effect::before {
+.button-glass-color-effect::before {
 	content: "";
 	position: absolute;
 	top: var(--y);
@@ -207,11 +213,11 @@ a.button-glass-color-effect::before {
 	transition: 0.5s, top 0s, left 0s;
 }
 
-a.button-glass-color-effect:hover::before {
+.button-glass-color-effect:hover::before {
 	opacity: 1;
 }
 
-a.button-glass-color-effect::after {
+.button-glass-color-effect::after {
 	content: "";
 	position: absolute;
 	inset: 1.5px;
