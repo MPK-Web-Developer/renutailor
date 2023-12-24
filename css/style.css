@@ -96,6 +96,9 @@
 		#ffc9ea
 	);
 	/* ========== End Gradient Colors ============ */
+
+	--all-radius: 24px;
+	--all-mobile-radius: 6px;
 }
 /* ========== End Variable ============ */
 
@@ -168,6 +171,24 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	display: none;
 }
 
+@media (max-width: 48em) {
+	header nav {
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		height: 100vh;
+		background: #1e1540;
+	}
+
+	header nav ul.header-navigation {
+		position: fixed;
+		z-index: 5;
+		inset: 20% 8% 20%;
+		border-radius: var(--all-radius);
+		background: #126b92;
+	}
+}
+
 /* ========== End Header Navigation ============ */
 /* ========== End Header ============ */
 
@@ -176,7 +197,7 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	position: relative;
 	font-weight: 600;
 	padding: 12px 20px;
-	border-radius: 6px;
+	border-radius: var(--all-radius);
 	color: var(--color-1-950);
 	background: rgba(255, 255, 255, 0.3);
 	overflow: hidden;
@@ -185,7 +206,7 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 
 .button-glass-color-effect:hover {
 	color: var(--color-action);
-	text-shadow: 0 0 15px var(--color-action), 0 0 65px var(--color-action);
+	text-shadow: 0 0 15px var(--color-action), 0 0 64px var(--color-action);
 }
 
 .button-glass-color-effect span {
@@ -221,8 +242,8 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	content: "";
 	position: absolute;
 	inset: 1.5px;
-	background: rgba(255, 255, 255, 0.6);
-	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: var(--all-radius);
 }
 
 /* ========== End Button Style ============ */
