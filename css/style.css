@@ -217,6 +217,10 @@ select {
 	font: inherit;
 }
 
+button {
+	border: none;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
 	html:focus-within {
@@ -280,11 +284,11 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	transition: 0.6s;
 	padding: 12px 2%;
-	display: flex;
 	z-index: 10;
 }
 
@@ -342,6 +346,7 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	background: rgba(255, 255, 255, 0.3);
 	overflow: hidden;
 	transition: 0.5s;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 .button-glass-color-effect:hover {
@@ -411,11 +416,20 @@ main .hero-section {
 		background: #1e1540;
 	}
 */
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	header nav {
+		position: inherit;
+	}
+
 	header nav ul.header-navigation {
 		position: fixed;
 		flex-direction: column;
 		align-items: flex-start;
-		top: 88px;
+		top: 90px;
 		right: 2%;
 		z-index: 5;
 		padding: 32px;
@@ -436,31 +450,37 @@ main .hero-section {
 }
 
 @media screen and (max-width: 480px) {
-	header {
-		flex-direction: row;
-	}
-
 	.button-glass-color-effect span {
 		font-size: var(--fs-500);
 	}
 
-	header a.button-glass-color-effect.call-button {
+	header .button-glass-color-effect {
 		padding: 8px 16px;
 		border-radius: var(--all-mobile-radius);
 	}
 
-	header a.button-glass-color-effect::after {
+	header .button-glass-color-effect::after {
 		border-radius: var(--all-mobile-radius);
 	}
 
-	header a.button-glass-color-effect.call-button span.button-icon {
+	header .button-glass-color-effect.call-button span.button-icon {
 		padding-right: 0;
 	}
 }
 
 @media screen and (max-width: 370px) {
+	header .button-glass-color-effect {
+		padding: 8px 12px;
+	}
+
+	.button-glass-color-effect.call-button span {
+		font-size: var(--fs-400);
+	}
+}
+
+@media screen and (max-width: 318px) {
 	header a.button-glass-color-effect.call-button {
-		padding: 12px;
+		padding: 8px;
 		border-radius: 50%;
 	}
 	header a.button-glass-color-effect::after {
