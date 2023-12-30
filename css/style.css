@@ -443,7 +443,7 @@ main .hero-section {
 		/*inset: 20% 8% 20%;*/
 		border-radius: var(--all-mobile-radius);
 		background: var(--color-2-950-P);
-		transform: translateX(123%);
+		transform: translateX(112%);
 		transition: transform 350ms ease-out;
 	}
 

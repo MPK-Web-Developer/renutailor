@@ -6,7 +6,6 @@ const navigationToggle = document.querySelector(".mobile-nav-toggle");
 // {------ Start Nav Bar ------}
 navigationToggle.addEventListener("click", () => {
 	const visibility = headerNavigation.getAttribute("data-visible");
-	console.log(visibility);
 
 	if (visibility === "false") {
 		headerNavigation.setAttribute("data-visible", true);
