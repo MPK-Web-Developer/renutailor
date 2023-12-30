@@ -1,6 +1,22 @@
 // {------ Start Variables ------}
-
+const headerNavigation = document.querySelector(".header-navigation");
+const navigationToggle = document.querySelector(".mobile-nav-toggle");
 // {------ End Variables --------}
+
+// {------ Start Nav Bar ------}
+navigationToggle.addEventListener("click", () => {
+	const visibility = headerNavigation.getAttribute("data-visible");
+	console.log(visibility);
+
+	if (visibility === "false") {
+		headerNavigation.setAttribute("data-visible", true);
+		navigationToggle.setAttribute("aria-expanded", true);
+	} else if (visibility === "true") {
+		headerNavigation.setAttribute("data-visible", false);
+		navigationToggle.setAttribute("aria-expanded", false);
+	}
+});
+// {------ End Nav Bar --------}
 
 // {------ Start Header ------}
 window.addEventListener("scroll", function () {
@@ -10,7 +26,7 @@ window.addEventListener("scroll", function () {
 // {------ End Header --------}
 
 // {------ Start Glass Color Effect ------}
-let glassButton = document.querySelectorAll(".button-glass-color-effect");
+let glassButton = document.querySelectorAll(".glass-color-effect");
 glassButton.forEach((singleButton) => {
 	singleButton.onmousemove = function (e) {
 		let x = e.pageX - singleButton.offsetLeft;

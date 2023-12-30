@@ -191,6 +191,7 @@ body {
 	font-family: var(--font-family-primary);
 	background: var(--color-5-50);
 	line-height: 1.5;
+	overflow-x: hidden;
 }
 
 a {
@@ -278,6 +279,12 @@ button {
 
 /* ========== End Utility Classes ============ */
 
+.container-full {
+	width: 100%;
+	height: auto;
+	padding: 0 2%;
+}
+
 /* ========== Start Header ========== */
 header {
 	position: fixed;
@@ -309,6 +316,10 @@ header .header-logo img {
 }
 
 /* ========== Start Header Navigation ========== */
+.mobile-nav-toggle {
+	display: none;
+}
+
 header nav ul.header-navigation {
 	position: relative;
 	display: flex;
@@ -337,7 +348,7 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 /* ========== End Header ============ */
 
 /* ========== Start Button Style ========== */
-.button-glass-color-effect {
+.glass-color-effect {
 	position: relative;
 	font-weight: 600;
 	padding: 12px 20px;
@@ -349,24 +360,24 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
-.button-glass-color-effect:hover {
+.glass-color-effect:hover {
 	color: var(--color-action);
 	text-shadow: 0 0 15px var(--color-action), 0 0 64px var(--color-action);
 }
 
-.button-glass-color-effect span {
+.glass-color-effect span {
 	position: relative;
 	z-index: 2;
 	letter-spacing: 0.1em;
 	font-size: var(--fs-600);
 }
 
-.button-glass-color-effect.call-button span.button-icon {
+.glass-color-effect.call-button span.button-icon {
 	padding-right: 8px;
 	font-size: var(--fs-600);
 }
 
-.button-glass-color-effect::before {
+.glass-color-effect::before {
 	content: "";
 	position: absolute;
 	top: var(--y);
@@ -379,11 +390,11 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	transition: 0.5s, top 0s, left 0s;
 }
 
-.button-glass-color-effect:hover::before {
+.glass-color-effect:hover::before {
 	opacity: 1;
 }
 
-.button-glass-color-effect::after {
+.glass-color-effect::after {
 	content: "";
 	position: absolute;
 	inset: 1.5px;
@@ -407,15 +418,6 @@ main .hero-section {
 
 /* ========== Start Screen Responsive ========== */
 @media (max-width: 48em) {
-	/*
-	header nav {
-		position: absolute;
-		z-index: 4;
-		width: 100%;
-		height: 100vh;
-		background: #1e1540;
-	}
-*/
 	header {
 		flex-direction: row;
 		justify-content: space-between;
@@ -423,6 +425,11 @@ main .hero-section {
 
 	header nav {
 		position: inherit;
+	}
+
+	.mobile-nav-toggle {
+		display: block;
+		cursor: pointer;
 	}
 
 	header nav ul.header-navigation {
@@ -436,6 +443,12 @@ main .hero-section {
 		/*inset: 20% 8% 20%;*/
 		border-radius: var(--all-mobile-radius);
 		background: var(--color-2-950-P);
+		transform: translateX(123%);
+		transition: transform 350ms ease-out;
+	}
+
+	.header-navigation[data-visible="true"] {
+		transform: translateX(0);
 	}
 
 	header nav ul.header-navigation li a {
@@ -450,43 +463,43 @@ main .hero-section {
 }
 
 @media screen and (max-width: 480px) {
-	.button-glass-color-effect span {
+	.glass-color-effect span {
 		font-size: var(--fs-500);
 	}
 
-	header .button-glass-color-effect {
+	.glass-color-effect {
 		padding: 8px 16px;
 		border-radius: var(--all-mobile-radius);
 	}
 
-	header .button-glass-color-effect::after {
+	.glass-color-effect::after {
 		border-radius: var(--all-mobile-radius);
 	}
 
-	header .button-glass-color-effect.call-button span.button-icon {
+	.glass-color-effect.call-button span.button-icon {
 		padding-right: 0;
 	}
 }
 
 @media screen and (max-width: 370px) {
-	header .button-glass-color-effect {
+	.glass-color-effect {
 		padding: 8px 12px;
 	}
 
-	.button-glass-color-effect.call-button span {
+	.glass-color-effect.call-button span {
 		font-size: var(--fs-400);
 	}
 }
 
 @media screen and (max-width: 318px) {
-	header a.button-glass-color-effect.call-button {
+	.glass-color-effect.call-button {
 		padding: 8px;
 		border-radius: 50%;
 	}
-	header a.button-glass-color-effect::after {
+	.glass-color-effect::after {
 		border-radius: 50%;
 	}
-	header a.button-glass-color-effect.call-button .button-text {
+	header .glass-color-effect.call-button .button-text {
 		display: none;
 	}
 }

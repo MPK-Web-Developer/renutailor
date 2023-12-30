@@ -45,7 +45,11 @@
 			</a>
 
 			<nav>
-				<ul class="header-navigation">
+				<ul
+					id="header-navigation"
+					class="header-navigation"
+					data-visible="false"
+				>
 					<li class="nav-link-active">
 						<a href="/"
 							><span aria-hidden="true"><i class="fa-solid fa-house"></i></span>
@@ -87,7 +91,7 @@
 
 			<a
 				href="tel:+91 8344204414"
-				class="button-glass-color-effect call-button"
+				class="glass-color-effect call-button"
 				title="Contact Us"
 				aria-label="Contact Number"
 				style="--color-action: #d4025e"
@@ -95,11 +99,15 @@
 				><span class="button-text">+91 83442 04414</span></a
 			>
 			<button
-				class="button-glass-color-effect call-button"
+				aria-controls="header-navigation"
+				aria-expanded="false"
+				class="glass-color-effect mobile-nav-toggle"
 				title="Nav Bar"
-				style="--color-action: #d4025e"
+				style="--color-action: #6340eb"
 			>
-				<span class=""><i class="fa-solid fa-bars"></i></span>
+				<span class="mobile-nav-toggle--icon"
+					><i class="fa-solid fa-bars"></i
+				></span>
 			</button>
 		</header>
 		<!--========== End Header ==============-->
@@ -254,6 +262,6 @@
 		</footer>
 		<!--========== End Footer ==============-->
 
-		<script src="./script/script.js"></script>
+		<script src="./script/script.js" defer></script>
 	</body>
 </html>
