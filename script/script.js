@@ -6,7 +6,15 @@ const toggleIcon = document.querySelectorAll(".mobile-nav-toggle--icon i");
 
 // {------ Start Active Page ------}
 const linkActivePage = window.location.pathname;
-console.log(linkActivePage);
+const navigationLinks = document.querySelectorAll(
+	"nav ul.header-navigation li a"
+);
+navigationLinks.forEach((getLink) => {
+	if (getLink.href.includes(`${linkActivePage}`)) {
+		console.log(getLink);
+		getLink.classList.add("nav-active");
+	}
+});
 // {------ End Active Page --------}
 
 // {------ Start Nav Bar ------}

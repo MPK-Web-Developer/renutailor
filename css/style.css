@@ -333,23 +333,29 @@ header nav ul.header-navigation li {
 	list-style: none;
 }
 
-header nav ul.header-navigation li a:is(:link, :active, :visited) {
+header nav ul.header-navigation li a {
 	position: relative;
 	color: var(--color-1-950);
 	font-weight: 600;
 	transition: 0.6s;
 }
+/*
+header nav ul.header-navigation li a:is(:link, :active, :visited) {}
+*/
+header nav ul.header-navigation li a:hover {
+	color: var(--color-1);
+}
 
 header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	display: none;
 }
-
+/*
 header nav ul.header-navigation li a:is(:link, :active, :visited).nav-active {
 	background: var(--color-2);
 	color: var(--color-1-100);
 	padding: 4px 8px;
 }
-
+*/
 /* ========== End Header Navigation ============ */
 /* ========== End Header ============ */
 
