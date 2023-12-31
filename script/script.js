@@ -1,11 +1,13 @@
 // {------ Start Variables ------}
 const headerNavigation = document.querySelector(".header-navigation");
 const navigationToggle = document.querySelector(".mobile-nav-toggle");
+const toggleIcon = document.querySelectorAll(".mobile-nav-toggle--icon i");
 // {------ End Variables --------}
 
 // {------ Start Nav Bar ------}
 navigationToggle.addEventListener("click", () => {
 	const visibility = headerNavigation.getAttribute("data-visible");
+	const expanded = navigationToggle.getAttribute("aria-expanded");
 
 	if (visibility === "false") {
 		headerNavigation.setAttribute("data-visible", true);
@@ -13,6 +15,14 @@ navigationToggle.addEventListener("click", () => {
 	} else if (visibility === "true") {
 		headerNavigation.setAttribute("data-visible", false);
 		navigationToggle.setAttribute("aria-expanded", false);
+	}
+
+	if (expanded === "false") {
+		toggleIcon[0].classList.remove("icon-active");
+		toggleIcon[1].classList.add("icon-active");
+	} else {
+		toggleIcon[0].classList.add("icon-active");
+		toggleIcon[1].classList.remove("icon-active");
 	}
 });
 // {------ End Nav Bar --------}
