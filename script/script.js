@@ -4,6 +4,11 @@ const navigationToggle = document.querySelector(".mobile-nav-toggle");
 const toggleIcon = document.querySelectorAll(".mobile-nav-toggle--icon i");
 // {------ End Variables --------}
 
+// {------ Start Active Page ------}
+const linkActivePage = window.location.pathname;
+console.log(linkActivePage);
+// {------ End Active Page --------}
+
 // {------ Start Nav Bar ------}
 navigationToggle.addEventListener("click", () => {
 	const visibility = headerNavigation.getAttribute("data-visible");

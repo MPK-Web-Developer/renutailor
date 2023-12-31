@@ -333,7 +333,7 @@ header nav ul.header-navigation li {
 	list-style: none;
 }
 
-header nav ul.header-navigation li a {
+header nav ul.header-navigation li a:is(:link, :active, :visited) {
 	position: relative;
 	color: var(--color-1-950);
 	font-weight: 600;
@@ -344,10 +344,16 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	display: none;
 }
 
+header nav ul.header-navigation li a:is(:link, :active, :visited).nav-active {
+	background: var(--color-2);
+	color: var(--color-1-100);
+	padding: 4px 8px;
+}
+
 /* ========== End Header Navigation ============ */
 /* ========== End Header ============ */
 
-/* ========== Start Button Style ========== */
+/* ========== Start glass effect ========== */
 .glass-color-effect {
 	position: relative;
 	font-weight: 600;
@@ -363,18 +369,6 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 .glass-color-effect:hover {
 	color: var(--color-action);
 	text-shadow: 0 0 15px var(--color-action), 0 0 64px var(--color-action);
-}
-
-.glass-color-effect span {
-	position: relative;
-	z-index: 2;
-	letter-spacing: 0.1em;
-	font-size: var(--fs-600);
-}
-
-.glass-color-effect.call-button span.button-icon {
-	padding-right: 8px;
-	font-size: var(--fs-600);
 }
 
 .glass-color-effect::before {
@@ -400,6 +394,20 @@ header nav ul.header-navigation li a > span[aria-hidden="true"] {
 	inset: 1.5px;
 	background: rgba(255, 255, 255, 0.8);
 	border-radius: var(--all-radius);
+}
+/* ========== End glass effect ============ */
+
+/* ========== Start Button Style ========== */
+.call-button span {
+	position: relative;
+	z-index: 2;
+	letter-spacing: 0.1em;
+	font-size: var(--fs-600);
+}
+
+.call-button span.button-icon {
+	padding-right: 8px;
+	font-size: var(--fs-600);
 }
 
 /* ========== End Button Style ============ */
@@ -498,7 +506,7 @@ main .hero-section {
 		border-radius: var(--all-mobile-radius);
 	}
 
-	.glass-color-effect.call-button span.button-icon {
+	.call-button span.button-icon {
 		padding-right: 0;
 	}
 }
@@ -508,20 +516,20 @@ main .hero-section {
 		padding: 8px 12px;
 	}
 
-	.glass-color-effect.call-button span {
+	.call-button span {
 		font-size: var(--fs-400);
 	}
 }
 
 @media screen and (max-width: 318px) {
-	.glass-color-effect.call-button {
-		padding: 8px;
-		border-radius: 50%;
-	}
 	.glass-color-effect::after {
 		border-radius: 50%;
 	}
-	header .glass-color-effect.call-button .button-text {
+	.call-button {
+		padding: 8px;
+		border-radius: 50%;
+	}
+	header .call-button .button-text {
 		display: none;
 	}
 }
