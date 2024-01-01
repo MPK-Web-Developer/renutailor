@@ -11,7 +11,6 @@ const navigationLinks = document.querySelectorAll(
 );
 navigationLinks.forEach((getLink) => {
 	if (getLink.href.includes(`${linkActivePage}`)) {
-		console.log(getLink);
 		getLink.classList.add("nav-active");
 	}
 });

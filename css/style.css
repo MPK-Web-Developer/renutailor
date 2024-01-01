@@ -449,17 +449,22 @@ header nav ul.header-navigation li a:is(:link, :active, :visited).nav-active {
 	width: 100%;
 	height: 100%;
 	border-radius: 50px;
-	background: linear-gradient(to left,  hsl(252.56deg 100% 16%) 0%, hsl(252.56deg 50.59% 32%) 8%, hsl(252.56deg 50.59% 32%) 92%, hsl(252.56deg 50.59% 16%) 100%);
+	background: linear-gradient(
+		to left,
+		hsl(252.56deg 100% 16%) 0%,
+		hsl(252.56deg 50.59% 32%) 8%,
+		hsl(252.56deg 50.59% 32%) 92%,
+		hsl(252.56deg 50.59% 16%) 100%
+	);
 }
 
 .front {
 	display: flex;
 	justify-content: center;
-    	align-items: center;
+	align-items: center;
 	position: relative;
-	/*padding: 12px 27px;*/
 	width: 40px;
-    	height: 40px;
+	height: 40px;
 	border-radius: 50px;
 	font-size: 1.1rem;
 	color: white;
@@ -568,7 +573,12 @@ main .hero-section {
 
 /* ========== Start Screen Responsive ========== */
 @media screen and (max-width: 1400px) {
-	.container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+	.container,
+	.container-sm,
+	.container-md,
+	.container-lg,
+	.container-xl,
+	.container-xxl {
 		max-width: 1320px;
 	}
 }
@@ -594,8 +604,15 @@ main .hero-section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 40px;
-		height: 40px;
+		width: 32px;
+		height: 32px;
+		border-radius: 50px;
+		font-size: 1rem;
+		color: white;
+		background: #1e1540;
+		will-change: transform;
+		transform: translateY(-4px);
+		transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 	}
 
 	.mobile-nav-toggle--icon i {
