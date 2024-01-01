@@ -567,6 +567,12 @@ main .hero-section {
 /* ========== End example ============ */
 
 /* ========== Start Screen Responsive ========== */
+@media screen and (max-width: 1400px) {
+	.container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+		max-width: 1320px;
+	}
+}
+
 @media (max-width: 48em) {
 	header {
 		flex-direction: row;
