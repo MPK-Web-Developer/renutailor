@@ -362,6 +362,7 @@ header nav ul.header-navigation li a:is(:link, :active, :visited).nav-active {
 /* ========== Start glass effect ========== */
 .glass-color-effect {
 	position: relative;
+	display: inline-block;
 	font-weight: 600;
 	padding: 12px 20px;
 	border-radius: var(--all-radius);
@@ -505,15 +506,16 @@ header nav ul.header-navigation li a:is(:link, :active, :visited).nav-active {
 /* Button icon animation style */
 .button-icon-animation-style {
 	font-family: inherit;
-	font-size: 20px;
-	background: royalblue;
+	width: fit-content;
+	font-size: 16px;
+	background: var(--color-2);
 	color: white;
-	padding: 0.7em 1em;
+	padding: 0.5em 1em;
 	padding-left: 0.9em;
 	display: flex;
 	align-items: center;
 	border: none;
-	border-radius: 16px;
+	border-radius: 24px;
 	overflow: hidden;
 	transition: all 0.2s;
 	cursor: pointer;
@@ -525,7 +527,7 @@ header nav ul.header-navigation li a:is(:link, :active, :visited).nav-active {
 	transition: all 0.3s ease-in-out;
 }
 
-.button-icon-animation-style svg {
+.button-icon-animation-style i {
 	display: block;
 	transform-origin: center center;
 	transition: transform 0.3s ease-in-out;
@@ -535,12 +537,12 @@ header nav ul.header-navigation li a:is(:link, :active, :visited).nav-active {
 	animation: fly-1 0.6s ease-in-out infinite alternate;
 }
 
-.button-icon-animation-style:hover svg {
-	transform: translateX(1.2em) rotate(45deg) scale(1.1);
+.button-icon-animation-style:hover i {
+	transform: translateX(4em) rotate(45deg) scale(1.1);
 }
 
 .button-icon-animation-style:hover span {
-	transform: translateX(5em);
+	transform: translateX(10em);
 }
 
 .button-icon-animation-style:active {
