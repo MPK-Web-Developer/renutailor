@@ -462,6 +462,10 @@ main .hero-section {
 		opacity: 0;
 		transition: 0.6s;
 	}
+	.mobile-nav-toggle--icon i.close-icon {
+		font-size: 18px;
+	}
+
 	.mobile-nav-toggle--icon i.icon-active {
 		z-index: 2;
 		opacity: 1;
