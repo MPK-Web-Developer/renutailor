@@ -67,7 +67,7 @@
 	}
 
 	header nav {
-		position: inherit;
+		position: absolute;
 	}
 
 	button.mobile-nav-toggle {
