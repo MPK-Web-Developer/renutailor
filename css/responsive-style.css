@@ -11,7 +11,7 @@
 .container-lg,
 .container-xl,
 .container-xxl {
-	max-width: 100%x;
+	width: 100%;
 }
 @media screen and (min-width: 1400px) {
 	.container,
@@ -31,10 +31,6 @@
 	.container-xl {
 		max-width: 1140px;
 	}
-
-	.container-xxl {
-		max-width: 100%;
-	}
 }
 @media screen and (min-width: 992px) {
 	.container,
@@ -43,10 +39,6 @@
 	.container-lg {
 		max-width: 960px;
 	}
-
-	.container-xl {
-		max-width: 100%;
-	}
 }
 @media screen and (min-width: 768px) {
 	.container,
@@ -54,24 +46,22 @@
 	.container-md {
 		max-width: 720px;
 	}
-
-	.container-lg {
-		max-width: 100%;
-	}
 }
 @media screen and (min-width: 576px) {
 	.container,
 	.container-sm {
 		max-width: 540px;
 	}
-
-	.container-lg {
+}
+@media screen and (max-width: 576px) {
+	.container,
+	.container-sm {
 		max-width: 100%;
 	}
 }
 
 @media (max-width: 48em) {
-	header {
+	header .header-container {
 		flex-direction: row;
 		justify-content: space-between;
 	}
