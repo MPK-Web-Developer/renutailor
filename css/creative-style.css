@@ -57,7 +57,7 @@
 		--hue: 320; /* change me */
 		--bg: oklch(35% 0.3 var(--hue));
 		--text: oklch(85% 0.1 var(--hue));
-		--shadow: oklch(25% 0.2 var(--hue) / 36%);
+		--shadow: oklch(25% 0.2 var(--hue) / 16%);
 		--highlight: oklch(98% 0.05 var(--hue));
 	}
 
