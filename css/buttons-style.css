@@ -18,6 +18,7 @@
 	background: transparent;
 	padding: 0;
 	cursor: pointer;
+	margin-top: 5px;
 	outline-offset: 4px;
 	transition: filter 250ms;
 	user-select: none;

@@ -151,28 +151,17 @@
 	.glass-color-effect::after {
 		border-radius: var(--all-mobile-radius);
 	}
-
-	.call-button span.button-icon {
-		padding-right: 0;
-	}
 }
 
 @media screen and (max-width: 370px) {
 	.glass-color-effect {
 		padding: 8px 12px;
 	}
-
-	.call-button span {
-		font-size: var(--fs-400);
-	}
 }
 
-@media screen and (max-width: 318px) {
-	.glass-color-effect::after {
-		border-radius: 50%;
-	}
+@media screen and (max-width: 350px) {
 	.call-button {
-		padding: 8px;
+		padding: 12px;
 		border-radius: 50%;
 	}
 	header .call-button .button-text {
