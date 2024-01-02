@@ -1,6 +1,8 @@
 /* ========== Start Hero Section ========== */
 main .hero-section {
 	min-height: 90vh;
+	display: flex;
+	align-items: center;
 	background: var(--gradient-color-primary) no-repeat center;
 }
 /* ========== End Hero Section ============ */

@@ -42,3 +42,28 @@
 	border-radius: var(--all-radius);
 }
 /* ========== End glass effect ============ */
+
+/* ========== Start Text Shadow Effect ========== */
+@layer demo {
+	.highlighted-text-shadow {
+		text-shadow:
+      /* regular text-shadow */ 0 0.15ch 15px var(--shadow),
+			/* text-shadow highlight */ 0 -2px 0 var(--highlight);
+	}
+}
+
+@layer demo.support {
+	:root {
+		--hue: 320; /* change me */
+		--bg: oklch(35% 0.3 var(--hue));
+		--text: oklch(85% 0.1 var(--hue));
+		--shadow: oklch(25% 0.2 var(--hue));
+		--highlight: oklch(98% 0.05 var(--hue));
+	}
+
+	h1 {
+		font-size: 64px;
+		line-height: 1em;
+	}
+}
+/* ========== End Text Shadow Effect ============ */
