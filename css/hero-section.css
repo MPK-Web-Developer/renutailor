@@ -1,0 +1,6 @@
+/* ========== Start Hero Section ========== */
+main .hero-section {
+	min-height: 90vh;
+	background: var(--gradient-color-primary) no-repeat center;
+}
+/* ========== End Hero Section ============ */

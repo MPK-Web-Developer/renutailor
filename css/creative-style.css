@@ -1,0 +1,44 @@
+/* ========== Start glass effect ========== */
+.glass-color-effect {
+	position: relative;
+	display: inline-block;
+	font-weight: 600;
+	padding: 12px 20px;
+	border-radius: var(--all-radius);
+	color: var(--color-1-950);
+	background: rgba(255, 255, 255, 0.3);
+	overflow: hidden;
+	transition: 0.5s;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.glass-color-effect:hover {
+	color: var(--color-action);
+	text-shadow: 0 0 15px var(--color-action), 0 0 64px var(--color-action);
+}
+
+.glass-color-effect::before {
+	content: "";
+	position: absolute;
+	top: var(--y);
+	left: var(--x);
+	transform: translate(-50%, -50%);
+	background: radial-gradient(var(--color-action), transparent, transparent);
+	width: 160px;
+	height: 160px;
+	opacity: 0;
+	transition: 0.5s, top 0s, left 0s;
+}
+
+.glass-color-effect:hover::before {
+	opacity: 1;
+}
+
+.glass-color-effect::after {
+	content: "";
+	position: absolute;
+	inset: 1.5px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: var(--all-radius);
+}
+/* ========== End glass effect ============ */
