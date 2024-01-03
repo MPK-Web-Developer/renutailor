@@ -121,7 +121,7 @@
 }
 
 .button-icon-animation-style:hover span {
-	transform: translateX(10em);
+	transform: translateX(200px);
 }
 
 .button-icon-animation-style:active {

@@ -5,4 +5,38 @@ main .hero-section {
 	align-items: center;
 	background: var(--gradient-color-primary) no-repeat center;
 }
+
 /* ========== End Hero Section ============ */
+
+/* ========== Start slider ========== */
+.slider {
+	width: 100%;
+}
+
+.slider-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 400px;
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.slider-item {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	opacity: 0;
+	border-radius: var(--all-radius);
+	background-size: contain;
+	z-index: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.slider-item-1 {
+	left: 15%;
+	opacity: 0.4;
+	transform: translateX(-50%);
+}
+
+/* ========== End slider ============ */
