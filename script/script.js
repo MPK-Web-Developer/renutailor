@@ -5,6 +5,7 @@ const toggleIcon = document.querySelectorAll(".mobile-nav-toggle--icon i");
 // {------ End Variables --------}
 
 // {------ Start Active Page ------}
+/*
 const linkActivePage = window.location.pathname;
 const navigationLinks = document.querySelectorAll(
 	"nav ul.header-navigation li a"
@@ -14,6 +15,7 @@ navigationLinks.forEach((getLink) => {
 		getLink.classList.add("nav-active");
 	}
 });
+*/
 // {------ End Active Page --------}
 
 // {------ Start Nav Bar ------}
@@ -45,6 +47,48 @@ window.addEventListener("scroll", function () {
 	header.classList.toggle("sticky", window.scrollY > 0);
 });
 // {------ End Header --------}
+
+// {------ Start Slider ------}
+const sliderContainer = document.querySelector(".slider-container");
+const sliderControlsContainer = document.querySelector(".slider-controls");
+const sliderControls = ["previous", "next"];
+const sliderItem = document.querySelectorAll(".slider-item");
+
+class Carousel {
+	constructor(container, items, controls) {
+		this.carouselContainer = container;
+		this.carouselControls = controls;
+		this.carouselArray = [...items];
+	}
+
+	updateSlider() {
+		this.carouselArray.forEach((el) => {
+			el.classList.remove("slider-item-1");
+			el.classList.remove("slider-item-2");
+			el.classList.remove("slider-item-3");
+			el.classList.remove("slider-item-4");
+			el.classList.remove("slider-item-5");
+		});
+
+		this.carouselArray.slice(0, 5).forEach((el, i) => {
+			el.classList.add(`slider-item-${i + 1}`);
+		});
+	}
+
+	setCurrentState(direction) {
+		if (direction.className == "slider-controls-previous") {
+			this.carouselArray.unshift(this.carouselArray.pop());
+		} else {
+			this.carouselArray.push(this.carouselArray.shift());
+		}
+	}
+
+	setControls() {
+		this.carouselControls.forEach((control) => {});
+	}
+}
+
+// {------ End Slider --------}
 
 // {------ Start Glass Color Effect ------}
 let glassButton = document.querySelectorAll(".glass-color-effect");
