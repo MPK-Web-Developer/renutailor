@@ -52,7 +52,7 @@ window.addEventListener("scroll", function () {
 const sliderContainer = document.querySelector(".slider-container");
 const sliderControlsContainer = document.querySelector(".slider-controls");
 const sliderControls = ["previous", "next"];
-const sliderItem = document.querySelectorAll(".slider-item");
+const sliderItems = document.querySelectorAll(".slider-item");
 
 class Carousel {
 	constructor(container, items, controls) {
@@ -81,12 +81,37 @@ class Carousel {
 		} else {
 			this.carouselArray.push(this.carouselArray.shift());
 		}
+		this.updateSlider();
 	}
 
 	setControls() {
-		this.carouselControls.forEach((control) => {});
+		this.carouselControls.forEach((control) => {
+			sliderControlsContainer.appendChild(
+				document.createElement("button")
+			).className = `slider-controls-${control}`;
+			document.querySelector(`slider-controls-${control}`).innerHTML = control;
+		});
+	}
+
+	useControls() {
+		const triggers = [...sliderControlsContainer.childNodes];
+		triggers.forEach((control) => {
+			control.addEventListener("click", (e) => {
+				e.preventDefault();
+				this.setCurrentState(control);
+			});
+		});
 	}
 }
+
+const creativeSlider = new Carousel(
+	sliderContainer,
+	sliderItems,
+	sliderControls
+);
+
+creativeSlider.setControls();
+creativeSlider.useControls();
 
 // {------ End Slider --------}
 

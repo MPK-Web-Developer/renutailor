@@ -80,12 +80,85 @@ main .hero-section {
 	height: 100px;
 }
 
-.slider-controls .slider-nav {
+.slider-controls button {
 	background-color: transparent;
 	font-size: 32px;
+	text-transform: capitalize;
 	margin: 0 50px;
 	padding: 0 12px;
 	border: 0;
 	cursor: pointer;
+}
+
+.slider-controls-button:focus {
+	outline: none;
+}
+
+.slider-controls-previous {
+	position: relative;
+}
+
+.slider-controls-previous::before {
+	border: solid #000;
+	border-width: 0 5px 5px 0;
+	content: "";
+	display: inline-block;
+	height: 5px;
+	width: 5px;
+	left: -30px;
+	padding: 10px;
+	position: absolute;
+	top: 25%;
+	transform: rotate(135deg) translateY(-50%);
+	transition: left 0.15s ease-in-out;
+}
+
+.slider-controls-previous:hover::before {
+	left: -40px;
+}
+
+.slider-controls-next {
+	position: relative;
+}
+
+.slider-controls-next::before {
+	border: solid #000;
+	border-width: 0 5px 5px 0;
+	content: "";
+	display: inline-block;
+	height: 5px;
+	width: 5px;
+	right: -30px;
+	padding: 10px;
+	position: absolute;
+	top: 45;
+	transform: rotate(-45deg) translateY(-50%);
+	transition: right 0.15s ease-in-out;
+}
+
+.slider-controls-next:hover::before {
+	right: -40px;
+}
+
+.slider-nav {
+	bottom: -15px;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.slider-nav li {
+	background: #ccc;
+	border-radius: 50%;
+	height: 10px;
+	margin: 0 16px;
+	width: 10px;
+}
+
+.slider-nav li.slider-item-selected {
+	background: #555;
 }
 /* ========== End slider ============ */
