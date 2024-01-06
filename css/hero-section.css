@@ -9,7 +9,101 @@ main .hero-section {
 /* ========== End Hero Section ============ */
 
 /* ========== Start slider ========== */
-.slider {
+
+.sliderDiv {
+	width: 100%;
+	height: var(--slider-height);
+	position: relative;
+	transform-style: preserve-3d;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.leftArrow {
+	width: 30px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: calc(50% - 15px);
+	left: 30px;
+	border-radius: 2px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+	line-height: 30px;
+	text-align: center;
+	color: gray;
+}
+
+.leftArrow:hover {
+	background: white;
+	cursor: pointer;
+}
+
+.rightArrow:hover {
+	background: white;
+	cursor: pointer;
+}
+
+.rightArrow {
+	width: 30px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: calc(50% - 15px);
+	right: 30px;
+	border-radius: 2px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+	line-height: 30px;
+	text-align: center;
+	color: gray;
+}
+
+.mainSlide {
+	width: 50%;
+	height: 70%;
+	background: white;
+	position: absolute;
+	top: 15%;
+	left: 25%;
+	border-radius: 3px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 5px 10px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.leftSlide {
+	width: 40%;
+	height: 60%;
+	background: white;
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	border-radius: 3px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.8);
+	opacity: 0.5;
+}
+
+.rightSlide {
+	width: 40%;
+	height: 60%;
+	background: white;
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	border-radius: 3px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.8);
+	opacity: 0.5;
+}
+
+.slide {
+	box-sizing: border-box;
+	padding: 0px;
+	transition-duration: 600ms;
+	text-align: center;
+	line-height: calc(var(--slider-height) * 0.7);
+	font-size: calc(var(--slider-height) * 0.09);
+	overflow: hidden;
+}
+
+/*.slider {
 	width: 100%;
 }
 
@@ -161,4 +255,5 @@ main .hero-section {
 .slider-nav li.slider-item-selected {
 	background: #555;
 }
+*/
 /* ========== End slider ============ */
