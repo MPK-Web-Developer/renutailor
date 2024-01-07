@@ -94,7 +94,8 @@ main .hero-section {
 }
 
 .slide {
-	box-sizing: border-box;
+	width: 320px;
+	height: 320px;
 	padding: 0px;
 	transition-duration: 600ms;
 	text-align: center;
