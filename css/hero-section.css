@@ -11,70 +11,39 @@ main .hero-section {
 /* ========== Start slider ========== */
 
 .sliderDiv {
-	width: 100%;
-	height: var(--slider-height);
+	width: var(--slider-width-and-height);
+	height: var(--slider-width-and-height);
 	position: relative;
 	transform-style: preserve-3d;
 	top: 50%;
-	transform: translateY(-50%);
 }
 
-.leftArrow {
-	width: 30px;
-	height: 30px;
-	background: rgba(255, 255, 255, 0.7);
+.sliderDiv .slide-nav {
 	position: absolute;
-	top: calc(50% - 15px);
-	left: 30px;
-	border-radius: 2px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
-	line-height: 30px;
-	text-align: center;
-	color: gray;
+	right: calc(50% - 4%);
+	display: flex;
 }
 
-.leftArrow:hover {
-	background: white;
+.slide-arrow {
 	cursor: pointer;
-}
-
-.rightArrow:hover {
-	background: white;
-	cursor: pointer;
-}
-
-.rightArrow {
-	width: 30px;
-	height: 30px;
-	background: rgba(255, 255, 255, 0.7);
-	position: absolute;
-	top: calc(50% - 15px);
-	right: 30px;
-	border-radius: 2px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
-	line-height: 30px;
-	text-align: center;
-	color: gray;
 }
 
 .mainSlide {
-	width: 50%;
-	height: 70%;
+	width: 100%;
 	background: white;
 	position: absolute;
-	top: 15%;
-	left: 25%;
+	top: 8%;
+	left: 0%;
 	border-radius: 3px;
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 5px 10px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 }
 
 .leftSlide {
-	width: 40%;
-	height: 60%;
+	width: 88%;
 	background: white;
 	position: absolute;
-	top: 20%;
+	top: 12%;
 	left: 20%;
 	border-radius: 3px;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.8);
@@ -82,18 +51,18 @@ main .hero-section {
 }
 
 .rightSlide {
-	width: 40%;
-	height: 60%;
+	width: 88%;
 	background: white;
 	position: absolute;
-	top: 20%;
-	left: 40%;
+	top: 12%;
+	right: 20%;
 	border-radius: 3px;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.8);
 	opacity: 0.5;
 }
 
 .slide {
+	aspect-ratio: 1/1;
 	padding: 0px;
 	transition-duration: 600ms;
 	text-align: center;
@@ -101,158 +70,4 @@ main .hero-section {
 	font-size: calc(var(--slider-height) * 0.09);
 	overflow: hidden;
 }
-
-/*.slider {
-	width: 100%;
-}
-
-.slider-container {
-	position: relative;
-	display: flex;
-	align-items: center;
-	height: 400px;
-	margin: 0 auto;
-	max-width: 500px;
-}
-
-.slider-item {
-	position: absolute;
-	width: 300px;
-	height: 300px;
-	opacity: 0;
-	border-radius: var(--all-radius);
-	background-size: contain;
-	z-index: 0;
-	transition: all 0.2s ease-in-out;
-}
-
-.slider-item-1 {
-	left: 15%;
-	opacity: 0.4;
-	transform: translateX(-50%);
-}
-
-.slider-item-2,
-.slider-item-4 {
-	height: 360px;
-	width: 360px;
-	opacity: 0.8;
-	z-index: 1;
-}
-
-.slider-item-2 {
-	left: 30%;
-	transform: translateX(-50%);
-}
-
-.slider-item-3 {
-	box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-	height: 420px;
-	width: 420px;
-	left: 50%;
-	opacity: 1;
-	transform: translateX(-50%);
-	z-index: 2;
-}
-
-.slider-item-4 {
-	left: 70%;
-	transform: translateX(-50%);
-}
-
-.slider-item-5 {
-	left: 85%;
-	opacity: 0.4;
-	transform: translateX(-50%);
-}
-
-.slider-controls {
-	display: flex;
-	justify-content: center;
-	margin: 25px 0;
-	height: 100px;
-}
-
-.slider-controls button {
-	background-color: transparent;
-	font-size: 32px;
-	text-transform: capitalize;
-	margin: 0 50px;
-	padding: 0 12px;
-	border: 0;
-	cursor: pointer;
-}
-
-.slider-controls-button:focus {
-	outline: none;
-}
-
-.slider-controls-previous {
-	position: relative;
-}
-
-.slider-controls-previous::before {
-	border: solid #000;
-	border-width: 0 5px 5px 0;
-	content: "";
-	display: inline-block;
-	height: 5px;
-	width: 5px;
-	left: -30px;
-	padding: 10px;
-	position: absolute;
-	top: 25%;
-	transform: rotate(135deg) translateY(-50%);
-	transition: left 0.15s ease-in-out;
-}
-
-.slider-controls-previous:hover::before {
-	left: -40px;
-}
-
-.slider-controls-next {
-	position: relative;
-}
-
-.slider-controls-next::before {
-	border: solid #000;
-	border-width: 0 5px 5px 0;
-	content: "";
-	display: inline-block;
-	height: 5px;
-	width: 5px;
-	right: -30px;
-	padding: 10px;
-	position: absolute;
-	top: 45;
-	transform: rotate(-45deg) translateY(-50%);
-	transition: right 0.15s ease-in-out;
-}
-
-.slider-controls-next:hover::before {
-	right: -40px;
-}
-
-.slider-nav {
-	bottom: -15px;
-	display: flex;
-	justify-content: center;
-	list-style: none;
-	padding: 0;
-	position: absolute;
-	width: 100%;
-}
-
-.slider-nav li {
-	background: #ccc;
-	border-radius: 50%;
-	height: 10px;
-	margin: 0 16px;
-	width: 10px;
-}
-
-.slider-nav li.slider-item-selected {
-	background: #555;
-}
-*/
 /* ========== End slider ============ */

@@ -60,10 +60,5 @@
 		--shadow: oklch(25% 0.2 var(--hue) / 16%);
 		--highlight: oklch(98% 0.05 var(--hue));
 	}
-
-	h1 {
-		font-size: 64px;
-		line-height: 1em;
-	}
 }
 /* ========== End Text Shadow Effect ============ */

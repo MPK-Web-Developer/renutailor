@@ -128,7 +128,7 @@
 			--fs-nav: var(--fs-300);
 		}
 	}
-	--slider-height: 250px;
+	--slider-width-and-height: 480px;
 	--all-radius: 24px;
 	--all-mobile-radius: 16px;
 }
