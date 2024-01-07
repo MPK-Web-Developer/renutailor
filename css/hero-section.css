@@ -6,6 +6,10 @@ main .hero-section {
 	background: var(--gradient-color-primary) no-repeat center;
 }
 
+.hero-section .hero-content h1 {
+	text-align: center;
+}
+
 /* ========== End Hero Section ============ */
 
 /* ========== Start slider ========== */
@@ -20,8 +24,9 @@ main .hero-section {
 
 .sliderDiv .slide-nav {
 	position: absolute;
-	right: calc(50% - 4%);
+	right: calc(50% - 20%);
 	display: flex;
+	gap: 8px;
 }
 
 .slide-arrow {
@@ -30,7 +35,6 @@ main .hero-section {
 
 .mainSlide {
 	width: 100%;
-	background: white;
 	position: absolute;
 	top: 8%;
 	left: 0%;
@@ -41,9 +45,8 @@ main .hero-section {
 
 .leftSlide {
 	width: 88%;
-	background: white;
 	position: absolute;
-	top: 12%;
+	top: 14%;
 	left: 20%;
 	border-radius: 3px;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.8);
@@ -52,9 +55,8 @@ main .hero-section {
 
 .rightSlide {
 	width: 88%;
-	background: white;
 	position: absolute;
-	top: 12%;
+	top: 14%;
 	right: 20%;
 	border-radius: 3px;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.8);
