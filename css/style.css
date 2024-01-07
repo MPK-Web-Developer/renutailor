@@ -208,6 +208,7 @@ img,
 picture {
 	max-width: 100%;
 	display: block;
+	border-radius: var(--all-mobile-radius);
 }
 
 /* Inherit fonts for inputs and buttons */
